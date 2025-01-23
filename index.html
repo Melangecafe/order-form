@@ -12,32 +12,7 @@
         <label for="trading-point">Название торговой точки:</label>
         <select id="trading-point">
             <option value="">Выберите торговую точку</option>
-            <option>Арбат</option>
-            <option>БЦ Фреш Плаза</option>
-            <option>БЦ Эгершельд</option>
-            <option>Дальпресс на Комсомольской</option>
-            <option>Кафе на 3 рабочей</option>
-            <option>Кафе на березовой</option>
-            <option>Кафе на Стрельникова</option>
-            <option>Пит-стоп на Бородинской</option>
-            <option>Питстоп на ботсаду2</option>
-            <option>Пит-стоп на Маяке</option>
-            <option>Пит-стоп на набережной 2</option>
-            <option>Пит-стоп под Некрасовским мостом</option>
-            <option>Приморгражданпроект</option>
-            <option>ПТК Искра</option>
-            <option>ПТК Луговая на 1 этаже возле эскалатора</option>
-            <option>ПТК Луговая на 2 этаже</option>
-            <option>Реми на Борисенко</option>
-            <option>Реми на Ильичева</option>
-            <option>ТД Славянский</option>
-            <option>ТРЦ Голубиная падь</option>
-            <option>ТРЦ Снеговая падь</option>
-            <option>ТТЦ Дазэл</option>
-            <option>ТТЦ Дазэл Столовая</option>
-            <option>ТЦ Надежда</option>
-            <option>ТЦ Первореченский центр.вход</option>
-            <option>Офис Ильичева 22а</option>
+            <!-- Options will be populated dynamically -->
         </select>
 
         <label for="employee-surname">Фамилия сотрудника:</label>
@@ -48,7 +23,25 @@
         <button onclick="shareWhatsApp()">Поделиться в WhatsApp</button>
 
         <div id="order-summary"></div>
+
+        <hr>
+
+        <h2>Управление Номенклатурой</h2>
+        <label for="admin-password">Введите пароль администратора:</label>
+        <input type="password" id="admin-password">
+        <button onclick="authorizeAdmin()">Авторизоваться</button>
+
+        <div id="inventory-management" style="display: none;">
+            <label for="new-item">Новая позиция:</label>
+            <input type="text" id="new-item">
+            <button onclick="addItem()">Добавить позицию</button>
+
+            <ul id="inventory-list">
+                <!-- Inventory items will be populated dynamically -->
+            </ul>
+        </div>
     </div>
+    <script src="inventory.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
