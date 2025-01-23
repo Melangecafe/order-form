@@ -17,7 +17,7 @@ body {
     width: 300px;
 }
 
-h1 {
+h1, h2 {
     text-align: center;
     color: #333;
 }
@@ -28,7 +28,7 @@ label {
     color: #555;
 }
 
-select, input[type="text"] {
+select, input[type="text"], input[type="password"] {
     width: 100%;
     padding: 8px;
     margin-top: 5px;
@@ -56,4 +56,8 @@ button:hover {
     padding: 10px;
     background-color: #e9ecef;
     border-radius: 4px;
+}
+
+#inventory-management {
+    margin-top: 20px;
 }
